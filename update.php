@@ -18,7 +18,7 @@ $sql="UPDATE `recurring` SET
  `material`='$material',
   `quantity`='$quantity',
  `amount`='$amount',
- `page_no`='$page_no',
+  `page_no`='$page_no',
  `supplier`='$supplier'
   WHERE srno=$srno";
 
