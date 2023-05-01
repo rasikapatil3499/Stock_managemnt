@@ -44,6 +44,7 @@
             if (!$result) {
                 die("Invalid Query" . $con->connect_error);
             }
+            
             while ($row = $result->fetch_assoc()) {
                 echo "
                     <tr>

@@ -20,42 +20,44 @@
 
         <h1>Recurring </h1>
         <form class="form" method="post" action="recurring.php">
-        <label for="no">Sr No:</label>
+          <label for="no">Sr No:</label>
           <input type="number" id="no" name="no"><br>
-     
+
 
           <label for="no">Bill No:</label>
           <input type="number" id="no" name="no"><br>
-     
 
 
-      <label for="date">Date:</label>
-      <input type="date" id="date" name="date"><br>
 
-      <label for="material">Material:</label>
-      <input type="text" id="material" name="material"><br>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date"><br>
 
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" name="quantity"><br>
+          <label for="material">Material:</label>
+          <input type="text" id="material" name="material"><br>
 
-      <label for="amount">Amount:</label>
-      <input type="number" id="amount" name="amount"><br>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity"><br>
 
-      <label for="page_no">Page No:</label>
-      <input type="number" id="page_no" name="page_no"><br>
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount"><br>
+
+          <label for="page_no">Page No:</label>
+          <input type="number" id="page_no" name="page_no"><br>
 
 
-      <label for="supplier">Supplier:</label>
-      <input type="text" id="supplier" name="supplier"><br>
-      <br>
+          <label for="supplier">Supplier:</label>
+          <input type="text" id="supplier" name="supplier"><br>
+          <br>
 
-      <input type="submit" class="btn  btn-primary" value="Submit">
-      </form>
+          <input type="submit" class="btn  btn-primary" value="Submit">
+        </form>
+      </div>
+
+
+
     </div>
+  </div>
 
-  </div>
-  </div>
-  
 
 </body>
 

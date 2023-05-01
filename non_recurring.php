@@ -6,6 +6,7 @@
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 
+
 </head>
 
 <body>
@@ -17,7 +18,7 @@
   <div class="card" style="width: 50rem;">
     <div class="card-body">
 
-    
+
 
       <h1>Non-Recurring </h1>
       <form method="post" action="non_recurring.php">
