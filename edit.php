@@ -45,6 +45,7 @@ $data=$result->fetch_assoc();
           <input type="number" id="no" name="no" value="<?=$data['no']?>"><br>
      
 
+          
 
       <label for="date">Date:</label>
       <input type="date" id="date" name="date" value="<?=$data['date']?>"><br>

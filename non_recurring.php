@@ -17,6 +17,7 @@
   <div class="card" style="width: 50rem;">
     <div class="card-body">
 
+    
 
       <h1>Non-Recurring </h1>
       <form method="post" action="non_recurring.php">
