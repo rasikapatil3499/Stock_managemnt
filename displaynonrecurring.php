@@ -22,7 +22,7 @@
     <table class="table">
 
         <thead class="table-dark">
-
+            <th>SR NO</th>
             <th>Date of Receipt</th>
             <th>Description</th>
             <th>Quantity</th>
@@ -32,6 +32,7 @@
             <th>Date of Bill Receipt</th>
             <th>Disposses Off </th>
             <th>Remark</th>
+            <td>Delete</td>
         </thead>
 
         <tbody>
@@ -57,6 +58,7 @@
             while ($row = $result->fetch_assoc()) {
                 echo "
     <tr>
+    <td>" . $row["SrNo"] . "</td>
     <td>" . $row["dor_nr"] . "</td>
     <td>" . $row["description_nr"] . "</td>
     <td>" . $row["quantity_nr"] . "</td>
@@ -66,12 +68,20 @@
     <td>" . $row["dobr_nr"] . "</td>
     <td>" . $row["disposes_off_nr"] . "</td>
     <td>" . $row["remark_nr"] . "</td>
-    
+ 
+
+    <td>
+    <a href='delnonrecurring.php?SrNo=" . $row['SrNo'] . "' >Delete</a></td>
+ 
      <td>
         
     </tr>  
     ";
+
             }
+
+
+
 
 
 
@@ -86,8 +96,21 @@
         </tbody>
 
 
+
+
     </table>
 
+
+
+
+    <?php
+    $sum = 0;
+    while ($row = mysqli_fetch_assoc($result)) {
+        $sum += $row['amount_nr'];
+        echo 'Total salary: $' . $sum;
+    }
+
+    ?>
 
     <br>
     <br>

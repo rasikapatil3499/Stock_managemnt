@@ -1,37 +1,30 @@
-body{
-width:75%;
+body {
+  width: 75%;
 
-margin: auto;
-
-
+  margin: auto;
 }
 
-.card{
-    max-width: 400px;
-margin: auto;
-
+.card {
+  max-width: 400px;
+  margin: auto;
 }
 
-form{
-    display:flex;
-    justify-content: space-between;
-    flex-direction: column;
+form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-.menu{
-    
-    margin: 10px;
-
+.menu {
+  margin: 10px;
 }
 
-ul{
-    list-style: none;
-    padding: 5px;
-
+ul {
+  list-style: none;
+  padding: 5px;
 }
 
-
-.sign{
-    display:inline-block;
+.foot,h3{
+  margin: 10px;
+;
 }
-    

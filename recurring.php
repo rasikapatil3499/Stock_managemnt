@@ -20,6 +20,9 @@
 
         <h1>Recurring </h1>
         <form class="form" method="post" action="recurring.php">
+        <label for="no">Sr No:</label>
+          <input type="number" id="no" name="no"><br>
+     
 
           <label for="no">Bill No:</label>
           <input type="number" id="no" name="no"><br>

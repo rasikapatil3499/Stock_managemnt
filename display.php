@@ -20,93 +20,59 @@
     <table class="table">
 
         <thead class="table-dark">
-
+            <th>SR NO</th>
             <th>Bill No</th>
-
             <th>Date</th>
             <th>Material</th>
             <th>Quantity</th>
             <th>Amount</th>
             <th>Page No</th>
             <th>Supplier</th>
-
-
-
-
-
-
-
-
-
+            <td>Edit</td>
+            <td>Delete</td>
 
         </thead>
 
         <tbody>
             <?php
-
-
-
             $con = new mysqli('localhost', 'root', '', 'stock');
-
-
             if ($con->connect_error) {
                 die("connection failed" . $con->connect_error);
             }
-
             $sql = "SELECT * FROM recurring";
-
             $result = $con->query($sql);
-
-
             if (!$result) {
                 die("Invalid Query" . $con->connect_error);
-
-
             }
-
             while ($row = $result->fetch_assoc()) {
                 echo "
-    <tr>
-    <td>" . $row["no"] . "</td>
-    <td>" . $row["date"] . "</td>
-    <td>" . $row["material"] . "</td>
-    <td>" . $row["quantity"] . "</td>
-    <td>" . $row["amount"] . "</td>
-    <td>" . $row["page_no"] . "</td>
-    <td>" . $row["supplier"] . "</td>
-     <td>
-        
-    </tr>  
-    ";
+                    <tr>
+                        <td>" . $row["srno"] . "</td>
+                        <td>" . $row["no"] . "</td>
+                        <td>" . $row["date"] . "</td>
+                        <td>" . $row["material"] . "</td>
+                        <td>" . $row["quantity"] . "</td>
+                        <td>" . $row["amount"] . "</td>
+                        <td>" . $row["page_no"] . "</td>
+                        <td>" . $row["supplier"] . "</td>
+                        <td><a href='edit.php?srno=" . $row['srno'] . "' class='btn  btn-success'>Edit</a></td>
+                        <td><a href='delete.php?srno=" . $row['srno'] . "' class='btn  btn-danger'>Delete</a></td>
+                    </tr>";
             }
-
-
-
-
-
-
-
-
-            ?>
-
-
-        </tbody>
-
-
+           ?>
+       </tbody>
     </table>
 
+<?php
+include "add.php";
 
-    <br>
-    <br>
-    <br>
+?>
 
+<foot class="foot">
+<h3>Sign of hod </h3>
 
-
-
-    <h5>Sign of hod</h5>
-    <br>
-    <br>
-    <h5>Sign of Principle</h5>
-</body>
+<h3>Sign of Principle</h3>
+        </foot>
+    </body>
 
 </html>
