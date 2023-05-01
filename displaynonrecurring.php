@@ -2,7 +2,7 @@
 <html lang="en">  
 
 <head>
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,7 @@
             <th>Date of Bill Receipt</th>
             <th>Disposses Off </th>
             <th>Remark</th>
+            <td>Edit</td>
             <td>Delete</td>
         </thead>
 
@@ -70,50 +71,19 @@
     <td>" . $row["dobr_nr"] . "</td>
     <td>" . $row["disposes_off_nr"] . "</td>
     <td>" . $row["remark_nr"] . "</td>
- 
+    <td><a href='edit_nr.php?SrNo=" . $row['SrNo'] . "' class='btn  btn-success'>Edit</a></td>
+    <td><a href='delnonrecurring.php?SrNo=" . $row['SrNo'] . "' class='btn  btn-danger'>Delete</a></td>
 
-    <td>
-    <a href='delnonrecurring.php?SrNo=" . $row['SrNo'] . "' >Delete</a></td>
- 
-     <td>
-        
-    </tr>  
-    ";
-
-            }
-
-
-
-
-
-
-
-
-
-
-
-            ?>
-
-
+    </tr>
+    ";       
+     }
+             ?>
         </tbody>
-
-
-
-
     </table>
-
-
-
-
     <?php
-    $sum = 0;
-    while ($row = mysqli_fetch_assoc($result)) {
-        $sum += $row['amount_nr'];
-        echo 'Total salary: $' . $sum;
-    }
+include "add_nr.php";
 
-    ?>
-
+?>
     <br>
     <br>
     <br>

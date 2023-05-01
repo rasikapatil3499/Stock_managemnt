@@ -1,16 +1,21 @@
 <?php
-include 'connection.php';
+
 include 'displaynonrecurring.php';
 
-$SrNo = $_GET['SrNo'];
-$del = mysqli_query($con, "delete from nonrecurring where SrNo='$SrNo'");
+$con = new mysqli('localhost', 'root', '', 'stock');
+if ($con->connect_error) {
+    die("connection failed" . $con->connect_error);
+}
+$SrNo= $_GET['SrNo'];
+$del = mysqli_query($con,"delete from nonrecurring where SrNo='$SrNo'");
 
 if ($del) {
-    mysqli_close($con);
-    header("location: displaynonrecurring.php");
-    exit;
+  mysqli_close($con);
+
+  exit;
 } else {
-    echo 'error';
+  echo 'error';
 }
+
 
 ?>
